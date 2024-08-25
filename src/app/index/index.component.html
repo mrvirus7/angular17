@@ -88,11 +88,17 @@
           <div class="form-row">
             <div class="form-group">
               <label>FirstName</label>
-              <input type="text" id="firstname" formControlName="firstname" placeholder="FirstName" class="form-control">
+              <input type="text" id="firstname" formControlName="firstname" placeholder="FirstName" class="form-control" >
+              <div *ngIf="myForm.get('firstname')?.invalid && myForm.get('firstname')?.touched">
+                <small class="text-danger">First name is required.</small>
+              </div>
             </div>
             <div class="form-group">
               <label>LastName</label>
               <input type="text" id="lastname" formControlName="lastname" placeholder="LastName" class="form-control">
+              <div *ngIf="myForm.get('lastname')?.invalid && myForm.get('lastname')?.touched">
+                <small class="text-danger">Last name is required.</small>
+              </div>
             </div>
           </div>
 
@@ -100,10 +106,16 @@
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" formControlName="email" name="email" required class="form-control">
+                <div *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched">
+                  <small class="text-danger">Email is required.</small>
+                </div>
             </div>
             <div class="form-group">
                 <label for="phone">Phone</label>
                 <input type="tel" id="phone" formControlName="phone" name="phone" required class="form-control">
+                <div *ngIf="myForm.get('phone')?.invalid && myForm.get('phone')?.touched">
+                  <small class="text-danger">PhoneNumber is required.</small>
+                </div>
             </div>
         </div>
         <div class="modal-footer">
