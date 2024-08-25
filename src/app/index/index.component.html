@@ -1,0 +1,148 @@
+<div class="container stu-table" >
+  <div class="headers">
+    <h2 class="table-title">Manage Students</h2>
+<button class="btn add" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Student (+)</button>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>S\No</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let lists of data,let i=index">
+        <td>{{lists.id}}</td>
+        <td>{{lists.firstname}}</td>
+        <td>{{lists.lastname}}</td>
+        <td>{{lists.phone}}</td>
+        <td>{{lists.email}}</td>
+
+        <td>
+          <button class="btn btn-success" style="margin-right: 10px;" (click)="editStudent(lists.id)">Edit</button>
+          <a class="btn btn-danger" (click)="studel(lists.id)" >delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Student Registration Form</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="myForm" (ngSubmit)="saveForm()">
+          <div class="form-row">
+            <div class="form-group">
+              <label>FirstName</label>
+              <input type="text" id="firstname" formControlName="firstname" placeholder="FirstName" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>LastName</label>
+              <input type="text" id="lastname" formControlName="lastname" placeholder="LastName" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" formControlName="email" name="email" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" formControlName="phone" name="phone" required class="form-control">
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary" >Save changes</button>
+        </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div> -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Student Registration Form</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="myForm" (ngSubmit)="saveForm()">
+          <div class="form-row">
+            <div class="form-group">
+              <label>FirstName</label>
+              <input type="text" id="firstname" formControlName="firstname" placeholder="FirstName" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>LastName</label>
+              <input type="text" id="lastname" formControlName="lastname" placeholder="LastName" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" formControlName="email" name="email" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" formControlName="phone" name="phone" required class="form-control">
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary" >Save changes</button>
+        </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- <div class="wrapper" *ngIf="showForm">
+  <div class="mobile-form">
+    <h2 class="text-center text-info">{{formHeader}}</h2>
+
+    <div class="group">
+      <div class="col-auto">
+      <label for="">FirstName</label>
+      <input type="text" class="form-control" [(ngModel)]="firstname" name="firstname">
+      </div>
+      <div class="col-auto">
+      <label for="">LastName</label>
+      <input type="text" class="form-control" [(ngModel)]="lastname" name="lastname">
+      </div>
+      <div class="col-auto">
+      <label for="">Email</label>
+      <input type="email" class="form-control" [(ngModel)]="email" name="email">
+      </div>
+      <div class="col-auto">
+      <label for="">phone</label>
+      <input type="text" class="form-control" [(ngModel)]="phone" name="phone">
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+

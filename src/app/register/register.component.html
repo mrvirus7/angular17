@@ -1,0 +1,33 @@
+<div class="container stu-table" >
+  <div class="headers">
+    <h2 class="table-title">Manage Students</h2>
+<button class="btn add" >View Student (+)</button>
+  </div>
+  <div class="container">
+    <h2>Edit Student</h2>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input id="firstname" type="text" class="form-control" formControlName="firstname">
+      </div>
+      <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input id="lastname" type="text" class="form-control" formControlName="lastname">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" class="form-control" formControlName="email">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input id="phone" type="text" class="form-control" formControlName="phone">
+      </div>
+      <button type="submit" class="btn btn-primary">Save Changes</button>
+    </form>
+  </div>
+
+
+
+
+</div>
+
